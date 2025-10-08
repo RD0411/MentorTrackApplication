@@ -31,6 +31,7 @@ public class FeedbackAdapter extends RecyclerView.Adapter<FeedbackAdapter.Feedba
         FeedbackItem item = feedbackList.get(position);
         holder.topicText.setText(item.getTopic());
         holder.descriptionText.setText(item.getDescription());
+        holder.teacherEmailText.setText("By: " + item.getTeacherName());
     }
 
     @Override
@@ -39,12 +40,13 @@ public class FeedbackAdapter extends RecyclerView.Adapter<FeedbackAdapter.Feedba
     }
 
     static class FeedbackViewHolder extends RecyclerView.ViewHolder {
-        TextView topicText, descriptionText;
+        TextView topicText, descriptionText, teacherEmailText;
 
         public FeedbackViewHolder(@NonNull View itemView) {
             super(itemView);
             topicText = itemView.findViewById(R.id.topicText);
             descriptionText = itemView.findViewById(R.id.descriptionText);
+            teacherEmailText = itemView.findViewById(R.id.teacherEmailText);
         }
     }
 }

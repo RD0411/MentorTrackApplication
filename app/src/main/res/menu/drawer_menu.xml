@@ -10,8 +10,20 @@
         android:icon="@drawable/ic_person" />
 
     <item android:id="@+id/nav_chat"
-        android:title="Chat"
+        android:title="Mentor's Corner"
         android:icon="@drawable/ic_chat" />
+
+    <item android:id="@+id/nav_placement_and_internship"
+        android:title="Placement and Internship Records"
+        android:icon="@drawable/placement_and_internship"/>
+
+    <item android:id="@+id/nav_milestones"
+        android:title="Milestones"
+        android:icon="@drawable/img"/>
+
+    <item android:id="@+id/nav_placement_eligibility_analysis"
+        android:title="Placement Eligibility Analysis"
+        android:icon="@drawable/img_1"/>
 
     <item
         android:id="@+id/nav_change_password"
@@ -26,4 +38,6 @@
     <item android:id="@+id/nav_logout"
         android:title="Logout"
         android:icon="@drawable/ic_logout" />
+
+
 </menu>

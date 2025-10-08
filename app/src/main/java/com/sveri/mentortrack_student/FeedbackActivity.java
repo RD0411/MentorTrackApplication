@@ -62,12 +62,27 @@ public class FeedbackActivity extends AppCompatActivity {
             for (DocumentSnapshot doc : querySnapshot.getDocuments()) {
                 Map<String, Object> feedbackMap = doc.getData();
                 if (feedbackMap != null) {
-                    for (Map.Entry<String, Object> entry : feedbackMap.entrySet()) {
-                        feedbackList.add(new FeedbackItem(entry.getKey(), entry.getValue().toString()));
+                    String teacherEmail = (String) feedbackMap.get("teacheremail");
+
+                    if (teacherEmail != null && !teacherEmail.isEmpty()) {
+                        // Fetch teacher's name from Firestore
+                        db.collection("teachers").document(teacherEmail)
+                                .get()
+                                .addOnSuccessListener(teacherDoc -> {
+                                    String teacherName = teacherDoc.getString("name");
+
+                                    for (Map.Entry<String, Object> entry : feedbackMap.entrySet()) {
+                                        if (!entry.getKey().equals("teacheremail")) {
+                                            feedbackList.add(new FeedbackItem(entry.getKey(), entry.getValue().toString(), teacherName));
+                                        }
+                                    }
+
+                                    feedbackAdapter.notifyDataSetChanged();
+                                })
+                                .addOnFailureListener(e -> Log.e("FeedbackActivity", "Failed to get teacher name", e));
                     }
                 }
             }
-            feedbackAdapter.notifyDataSetChanged();
         }).addOnFailureListener(e -> Log.e("FeedbackActivity", "Error fetching feedback", e));
     }
 }

@@ -15,6 +15,18 @@
         android:theme="@style/Theme.MentorTrackStudent"
         tools:targetApi="31">
         <activity
+            android:name=".EligibilityAnalysisActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CompanyDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PlacementAndInternship"
+            android:exported="false" />
+        <activity
             android:name=".FeedbackItem"
             android:exported="false" />
         <activity

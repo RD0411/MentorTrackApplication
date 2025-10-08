@@ -2,4 +2,6 @@
     <string name="app_name">MentorTrack-Student</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="gemini_api_key">AIzaSyADGWW4x38Tm3WPv-iiFvuDyH34rdsfG4Y</string>
+    <string name="gemini_project_id">gen-lang-client-0602987198</string>
 </resources>
