@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:padding="12dp"
+    android:elevation="6dp"
+    android:backgroundTint="#FFFFFF"
+    android:radius="12dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/companyName"
+            android:text="Company Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#3949AB"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <TextView
+            android:id="@+id/companyCriteria"
+            android:text="Criteria"
+            android:textColor="#333333"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <TextView
+            android:id="@+id/companyDate"
+            android:text="Date"
+            android:textColor="#333333"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+
+        <TextView
+            android:id="@+id/companyDescription"
+            android:text="Description"
+            android:textColor="#666666"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
